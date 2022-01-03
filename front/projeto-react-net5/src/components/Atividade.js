@@ -2,12 +2,10 @@ import React from 'react'
 
 function prioridadeLabel(param) {
     switch(param){
-      case '1':
-        return 'Baixa'
-      case '2':
-        return 'Normal'
-      case '3':
-        return 'Alta'
+      case 'Baixa':
+      case 'Normal':
+      case 'Alta':
+        return param;
       default:
         return 'Não definido';
     }
@@ -15,11 +13,11 @@ function prioridadeLabel(param) {
   
 function prioridadeStyle(param, icone) {
     switch(param){
-      case '1':
+      case 'Baixa':
         return icone ? 'smile' : 'success';
-      case '2':
+      case 'Normal':
         return icone ? 'meh' : 'dark';
-      case '3':
+      case 'Alta':
         return icone ? 'frown' : 'warning';
       default:
         return 'Não definido';
@@ -48,7 +46,7 @@ export default function Atividade(props) {
                     <div className='btn btn-outline-primary me-2 btn-sm' onClick={ ()=>props.editarAtividade(props.ativ.id)}>
                         <i className="fas fa-pen me-2"/>Editar
                     </div>
-                    <div className='btn btn-outline-danger btn-sm' onClick={ () => props.eliminarAtividade(props.ativ.id)}>
+                    <div className='btn btn-outline-danger btn-sm' onClick={ () => props.handleConfirmModal(props.ativ.id)}>
                         <i className="fas fa-trash me-2"/>Eliminar
                     </div>
                 </div>

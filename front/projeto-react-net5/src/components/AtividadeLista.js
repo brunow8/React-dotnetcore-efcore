@@ -8,8 +8,8 @@ export default function AtividadeLista(props) {
             <Atividade
                 key={ativ.id}
                 ativ={ativ}
-                eliminarAtividade={props.eliminarAtividade}
                 editarAtividade={props.editarAtividade}
+                handleConfirmModal = {props.handleConfirmModal}
             />
             ))} 
         </div>
