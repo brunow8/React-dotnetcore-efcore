@@ -24,7 +24,7 @@ function prioridadeStyle(param, icone) {
     }
 }
 
-export default function Atividade(props) {
+export default function AtividadeItem(props) {
     return (
         <div className={"card mb-2 shadow border-" + prioridadeStyle(props.ativ.prioridade)} style={{width: "100%"}}>
             <div className="card-body">
